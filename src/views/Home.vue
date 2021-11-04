@@ -1,5 +1,9 @@
 <template>
-  <div :style="style" class="home"></div>
+  <div class="home">
+    <div class="home_text-block">
+      <h1 class="home_title" v-text="'STAR WARS'" />
+    </div>
+  </div>
 </template>
 
 <script lang="ts">

@@ -1,5 +1,14 @@
 .home {
   width: 100%;
   height: 100vh;
-  overflow:hidden;
+  object-fit: contain;
+  background-position: center;
+  background-size: contain;
+  background-image: url('/img/stars.jpg');
+  overflow: hidden;
+}
+
+.home_title {
+  color: gold;
+  text-align: center;
 }
