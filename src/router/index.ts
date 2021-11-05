@@ -10,6 +10,13 @@ const routes: Array<RouteRecordRaw> = [
     path: "/collection",
     name: "Collection",
     component: require("@/views/Collection.vue").default,
+    children: [
+      {
+        path: "/films",
+        name: "Films",
+        component: require("@/views/Films.vue").default,
+      }
+  ]
   },
 
 ];
