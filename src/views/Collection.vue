@@ -19,12 +19,28 @@
       <q-drawer :width="312" v-model="leftDrawerOpen" class="bg-grey-8" side="left" behavior="mobile">
         <q-list dark>
           <q-item-label header>Essential Links</q-item-label>
+
           <q-item clickable @click="$router.push({name: 'Films'})">
             <q-item-section>
               <q-item-label>Films</q-item-label>
               <q-item-label caption>Browse awesome SW films</q-item-label>
             </q-item-section>
           </q-item>
+
+          <q-item clickable @click="$router.push({name: 'Films'})">
+            <q-item-section>
+              <q-item-label>Actors</q-item-label>
+              <q-item-label caption>Browse your favourite SW actors and actresses</q-item-label>
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable @click="$router.push({name: 'Films'})">
+            <q-item-section>
+              <q-item-label>Starships</q-item-label>
+              <q-item-label caption>Browse amazing SW starships</q-item-label>
+            </q-item-section>
+          </q-item>
+
         </q-list>
       </q-drawer>
 
