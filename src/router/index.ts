@@ -6,6 +6,12 @@ const routes: Array<RouteRecordRaw> = [
     name: "Home",
     component: require("@/views/Home.vue").default,
   },
+  {
+    path: "/collection",
+    name: "Collection",
+    component: require("@/views/Collection.vue").default,
+  },
+
 ];
 
 const router = createRouter({
