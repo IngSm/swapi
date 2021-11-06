@@ -4,10 +4,14 @@ const state = () => ({
   films: []
 });
 
-const getters = {};
+const getters = {
+  getAllFilms: (state: any) => {
+    return state.films
+  }
+};
 
 const actions = {
-  async showFilms (commit: any) {
+  async showFilms ({commit}: any) {
     const filmsAll = await getFilms(null);
     commit('setAllFilms', filmsAll)
   }
@@ -20,8 +24,9 @@ const mutations = {
 }
 
 export default {
+  namespaced: true,
   state,
   getters,
   actions,
-  
+  mutations
 }

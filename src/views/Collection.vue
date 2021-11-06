@@ -84,10 +84,8 @@ export default class collection extends Vue {
   }
 
   showFilms () {
-    let films = getFilms(null);
-    films.then((res) => {
-      console.log(res);
-    });
+    console.log(1)
+    this.$store.dispatch('filmsAll/showFilms')
     this.$router.push({name: 'Films'})
   }
 }
