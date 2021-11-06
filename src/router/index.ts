@@ -15,10 +15,9 @@ const routes: Array<RouteRecordRaw> = [
         path: "/films",
         name: "Films",
         component: require("@/views/Films.vue").default,
-      }
-  ]
+      },
+    ],
   },
-
 ];
 
 const router = createRouter({
