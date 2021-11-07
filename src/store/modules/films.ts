@@ -1,18 +1,18 @@
-import getFilms from "@/services/Api";
+import { getFilms } from "@/services/Api";
 
 const state = () => ({
   films: []
 });
 
 const getters = {
-  getAllFilms: (state: any) => {
+  getAllFilms: (state: any, getters: any) => {
     return state.films
   }
 };
 
 const actions = {
-  async showFilms ({commit}: any) {
-    const filmsAll = await getFilms(null);
+  async showFilms ({commit}: any, arg: null | number) {
+    const filmsAll = await getFilms(arg);
     commit('setAllFilms', filmsAll)
   }
 }

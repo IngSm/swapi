@@ -20,7 +20,28 @@
   border-radius: 25px;
 }
 
+.collection-browser_home-icon-wrap {
+  transition: .3s;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0 0 0 12px;
+}
+
+.collection-browser_Yoda-icon {
+  cursor: pointer;
+  transition: .3s;
+}
+
+.collection-browser_Yoda-icon:hover {
+  background: rgba($color: #FFFFFF, $alpha: .1);
+}
+
 .collection-browser_cont-text {
-  font-size: 35px;
+  font-size: 30px;
+  margin-bottom: 10px !important;
   text-align: center;
+}
+
+.collection-browser_menu-item {
+  text-transform: capitalize;
 }

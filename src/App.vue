@@ -3,17 +3,15 @@
 </template>
 
 <script>
-import { ref } from "vue";
 export default {
   name: "LayoutDefault",
 
   components: {},
 
-  setup() {
-    return {
-      leftDrawerOpen: ref(false),
-    };
-  },
+  created() {
+    this.$store.dispatch('films/showFilms', null)
+    this.$store.dispatch('swapiRoot/showSwapiRoot')
+  }
 };
 </script>
 

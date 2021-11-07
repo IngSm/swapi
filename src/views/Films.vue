@@ -1,39 +1,22 @@
 <template>
   <div class="films">
     <q-page-container>
-      <div class="films_card-container">
-        {{swFilms[0]}}
+      <div v-for="(item, key) in filmsAll" :key="key" class="films_card-container">
+        <div>{{item.title}}</div>
       </div>
     </q-page-container>
   </div>
 </template>
 
 <script lang="ts">
-import getFilms from "@/services/Api";
 import { Options, Vue } from "vue-class-component";
-import { mapGetters } from "vuex";
-
 @Options({
   components: {},
-})
-export default class films extends Vue {
-  swFilms: any = [];
-
-  mounted() {
-    console.log(this.swFilms)
-    console.log(getFilms)
-  }
-
-  computed () {
-    function getFilms () {
-      return {
-        ...mapGetters('films', {
-          films: 'getAllFilms'
-        })
-      }
+  computed: {
+    filmsAll () {
+      return this.$store.getters['films/getAllFilms']
     }
-
-    this.swFilms = getFilms()
   }
-}
+})
+export default class films extends Vue {}
 </script>
