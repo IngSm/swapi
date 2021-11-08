@@ -1,8 +1,10 @@
 <template>
   <div class="films">
     <q-page-container>
-      <div v-for="(item, key) in filmsAll" :key="key" class="films_card-container">
-        <div>{{item.title}}</div>
+      <div class="films_card-container">
+        <div v-for="(item, key) in filmsAll" :key="key" class="films_card-item">
+          <Card /> 
+        </div>
       </div>
     </q-page-container>
   </div>
@@ -10,8 +12,11 @@
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
+import Card from '@/components/Card.vue';
 @Options({
-  components: {},
+  components: {
+    Card
+  },
   computed: {
     filmsAll () {
       return this.$store.getters['films/getAllFilms']

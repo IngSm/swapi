@@ -13,7 +13,7 @@
               <q-avatar>
                 <img @click="$router.push({name: 'Collection'})" class="collection-browser_Yoda-icon" src="@/assets/svgs/Yoda.svg" />
               </q-avatar>
-              Universe collection
+              
             </q-toolbar-title>
           </q-toolbar>
         </q-header>
