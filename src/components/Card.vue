@@ -1,9 +1,9 @@
 <template>
   <q-card class="my-card">
-      <img src="https://cdn.quasar.dev/img/mountains.jpg">
+      <img :src="path">
 
       <q-card-section>
-        <div class="text-h6">Our Changing Planet</div>
+        <div class="text-h6" v-text="text" />
       </q-card-section>
 
       <q-card-section class="q-pt-none">
@@ -16,6 +16,10 @@
 import { Options, Vue } from "vue-class-component";
 @Options({
   components: {},
+  props: {
+    path: String,
+    text: String
+  }
 })
 export default class card extends Vue {}
 </script>
