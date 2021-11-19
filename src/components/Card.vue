@@ -2,13 +2,10 @@
   <q-card class="my-card">
       <img :src="path">
 
-      <q-card-section>
-        <div class="text-h6" v-text="text" />
+      <q-card-section class="text-h6 my-card__section">
+        <div v-text="text" />
       </q-card-section>
-
-      <q-card-section class="q-pt-none">
-        
-      </q-card-section>
+      
     </q-card>
 </template>
 
