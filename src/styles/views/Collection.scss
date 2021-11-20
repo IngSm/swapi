@@ -20,6 +20,10 @@
   border-radius: 25px;
 }
 
+.collection-browser_layout::-webkit-scrollbar {
+  background: transparent !important;
+}
+
 .collection-browser_home-icon-wrap {
   transition: .3s;
   cursor: pointer;

@@ -9,11 +9,11 @@
         <q-header elevated class="bg-grey-6">
           <q-toolbar>
             <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
-            <q-toolbar-title>
+            <q-toolbar-title class="collection-browser_title">
               <q-avatar>
-                <img @click="$router.push({name: 'Collection'})" class="collection-browser_Yoda-icon" src="@/assets/svgs/Yoda.svg" />
+                <img @click="$router.push({name: 'Collection'})" class="collection-browser_Yoda-icon" src="@/assets/svgs/Yoda.svg" alt="Yoda image" />
               </q-avatar>
-              
+              {{makeName}}
             </q-toolbar-title>
           </q-toolbar>
         </q-header>
@@ -81,6 +81,14 @@ import Slider from '@/components/Slider.vue';
   computed: {
     menuItems () {
       return this.$store.getters['swapiRoot/getRoot']
+    },
+    makeName () {
+      switch (this.$route.name) {
+        case 'Collection':
+          return 'Collection';
+        case 'Films':
+          return 'Films';
+      }
     }
   }
 })

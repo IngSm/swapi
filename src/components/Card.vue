@@ -1,6 +1,6 @@
 <template>
   <q-card class="my-card">
-      <img :src="path">
+      <img :src="path" alt="Poster">
 
       <q-card-section class="text-h6 my-card__section">
         <div v-text="text" />
