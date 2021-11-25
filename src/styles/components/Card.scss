@@ -1,12 +1,25 @@
 .my-card {
   margin: auto;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.my-card:hover {
+  box-shadow: goldenrod 1px 1px 15px 5px;
+}
+
+.my-card:hover .my-card__section {
+  color: gold;
 }
 
 .my-card img {
   height: 20em !important;
+  object-fit: contain;
+  background: black;
 }
 
 .my-card__section {
   height: 5em;
   background: black;
+  transition: .4s;
 }
