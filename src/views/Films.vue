@@ -5,7 +5,7 @@
         <div v-for="(item, key) in filmsAll" :key="key" class="films_card-item">
           <Card
             :text="item.title"
-            :path="getImg(filmsCards[key])"
+            :path="getImg(item.episode_id)"
           /> 
         </div>
       </div>
@@ -20,6 +20,7 @@ import Card from '@/components/Card.vue';
   data () {
     return {
       filmsCards: [
+        '',
         'ep1.jpg',
         'ep2.jpg',
         'ep3.jpg',
@@ -33,8 +34,10 @@ import Card from '@/components/Card.vue';
     Card
   },
   methods: {
-    getImg(pic: string) {
-      return require('../assets/imgs/films/' + pic)
+    getImg(id: any) {
+
+      console.log(this.filmsCards[id])
+      return require('../assets/imgs/films/' + this.filmsCards[id])
     }
   },
   computed: {
