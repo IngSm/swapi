@@ -1,5 +1,7 @@
 # swapi
 
+Pet project to show my skills
+
 ## Project setup
 ```
 npm install
