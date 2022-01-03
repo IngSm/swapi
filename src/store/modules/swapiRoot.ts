@@ -1,32 +1,32 @@
 import { getSwapiRoot } from "@/services/Api";
 
 const state = () => ({
-  root: []
+  root: [],
 });
 
 const getters = {
   getRoot: (state: any, getters: any) => {
-    return state.root
-  }
+    return state.root;
+  },
 };
 
 const actions = {
-  async showSwapiRoot ({commit}: any) {
+  async showSwapiRoot({ commit }: any) {
     const rootAll = await getSwapiRoot();
-    commit('setSwapiRoot', rootAll)
-  }
-}
+    commit("setSwapiRoot", rootAll);
+  },
+};
 
 const mutations = {
-  setSwapiRoot (state: any, rootAll: any) {
-    state.root = rootAll
-  }
-}
+  setSwapiRoot(state: any, rootAll: any) {
+    state.root = rootAll;
+  },
+};
 
 export default {
   namespaced: true,
   state,
   getters,
   actions,
-  mutations
-}
+  mutations,
+};

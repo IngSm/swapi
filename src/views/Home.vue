@@ -6,7 +6,7 @@
         <h3 class="home_title" v-text="'Universe collection'" />
         <div class="home_btn-wrap">
           <q-btn
-            @click="$router.push({name: 'Collection'})"
+            @click="$router.push({ name: 'Collection' })"
             class="home_btn"
             outline
             style="color: goldenrod"

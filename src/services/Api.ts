@@ -2,14 +2,14 @@ import axios from "axios";
 
 axios.defaults.baseURL = "https://swapi.dev/api";
 
-export async function getSwapiRoot () {
+export async function getSwapiRoot() {
   try {
     const response = await axios.get("/");
-    return response.data
+    return response.data;
   } catch (e) {
-    console.error(e)
-  };
-};
+    console.error(e);
+  }
+}
 
 export async function getFilms(id: number | null) {
   if (id === null) {
@@ -18,13 +18,13 @@ export async function getFilms(id: number | null) {
       return response.data.results;
     } catch (error) {
       console.error(error);
-    };
+    }
   } else {
     try {
       const response = await axios.get(`/films/${id}`);
       return response.data.results;
     } catch (error) {
       console.error(error);
-    };
-  };
-};
+    }
+  }
+}

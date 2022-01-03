@@ -16,6 +16,11 @@ const routes: Array<RouteRecordRaw> = [
         name: "Films",
         component: require("@/views/Films.vue").default,
       },
+      {
+        path: "/vehicles",
+        name: "Vehicles",
+        component: require("@/views/Vehicles.vue").default,
+      },
     ],
   },
 ];

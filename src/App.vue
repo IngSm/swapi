@@ -9,9 +9,9 @@ export default {
   components: {},
 
   created() {
-    this.$store.dispatch('films/showFilms', null)
-    this.$store.dispatch('swapiRoot/showSwapiRoot')
-  }
+    this.$store.dispatch("films/showFilms", null);
+    this.$store.dispatch("swapiRoot/showSwapiRoot");
+  },
 };
 </script>
 
