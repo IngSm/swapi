@@ -1,5 +1,11 @@
+// views
+
 @use 'views/Home.scss';
 @use 'views/Collection.scss';
 @use 'views/Films.scss';
+@use 'views/Vehicles.scss';
+
+// components
+
 @use 'components/Slider.scss';
 @use 'components/Card.scss';
