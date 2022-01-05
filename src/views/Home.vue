@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="main" class="home">
     <transition name="fade">
       <div v-if="start" class="home-main">
         <h1 class="home_title" v-text="'STAR WARS'" />
