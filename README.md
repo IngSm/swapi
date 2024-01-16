@@ -1,3 +1,5 @@
+#DEPRICATED AND OUT OF DATE
+
 # swapi
 
 Pet project to show my skills
